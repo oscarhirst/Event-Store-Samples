@@ -8,7 +8,7 @@ namespace ESReadApp
 {
     class Program
     {
-        static void Main()//Test this
+        static void Main()
         {
             StreamEventsSlice streamEvents;
 
