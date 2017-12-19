@@ -24,13 +24,13 @@ namespace ESReadApp
 
             var streamLength = returnedEvents.Length;
 
-            var eventDataDictionary = new Dictionary<int, string>();
+            var eventDataDictionary = new Dictionary<long, string>();
 
             var eventCount = 0;
 
             foreach (ResolvedEvent eve in returnedEvents)
             {
-                var number = Convert.ToInt32(eve.Event.EventNumber);
+                var number = eve.Event.EventNumber;
                 var data = Encoding.UTF8.GetString(eve.Event.Data);
 
                 eventDataDictionary.Add(number, data);
